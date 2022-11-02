@@ -1,0 +1,107 @@
+.post__header {
+  width: calc(100% + var(--space) * 2);
+  margin-left: calc(var(--space) * -1);
+  margin-top: calc(var(--space) * -1);
+  margin-bottom: calc(var(--space) * .8);
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 80vw;
+  font-size: 0.9em;
+  max-height: 780px;
+}
+
+.post__header img {
+  width: 100%;
+}
+
+.post__header:empty {
+  display: none;
+}
+.post-title__text {
+  font-size: 1.802em;
+  margin-top: 0rem;
+  padding: 0rem;
+}
+
+.post__footer {
+  display: flex;
+}
+
+.post__content img {
+  width: calc(100% + var(--space) * 2);
+  margin-left: calc(var(--space) * -1);
+  display: block;
+  max-width: none;
+}
+
+.post__comments {
+  background-color: var(--bg-content-color);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  transition: background-color 0.6s;
+  padding: var(--space);
+}
+
+.post__comments:empty {
+  display: none;
+}
+
+.post__author {
+  margin-top: calc(var(--space) / 2);
+}
+
+.post-links {
+  padding: 1rem 0rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.post-links__buttons {
+  display: flex;
+  gap: .5rem;
+}
+
+/* Make buttuns use full width in small screens */
+@media screen and (max-width: 650px) {
+  .post-links__buttons {
+    flex-direction: column;
+  }
+}
+
+.post-meta {
+  font-size: .8em;
+  opacity: .8;
+}
+
+.btn--post-links {
+  gap: .5rem;
+  width: 100%;
+  transition:  all .3s ease-in-out;
+  outline: solid 2px;
+  outline-color: transparent;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 2.5rem;
+}
+
+.btn__icon--post-links {
+  position: absolute;
+}
+
+.btn__icon--post-links-left {
+  left: 15px;
+}
+
+.btn__icon--post-links-right {
+  right: 15px;
+}
+
+.btn--post-links:hover,
+.btn--post-links:focus-visible {
+  outline-color: var(--body-color);
+  outline-offset: .1rem;
+}

@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<article class="post">
+  <div class="main-title">
+    <h1 class="post-title__text">
+      {{ title }}
+    </h1>
+
+    <time class="post-meta" datetime="{{ page.date | htmlDateString }}">Postado em {{ page.date | readableDate }}</time>
+  </div>
+
+  <div class="post content-box">
+
+    {% if cover_img %}
+      <div class="post__header">
+        <img
+          class="post-card__image"
+          src="{{ cover_img }}"
+          alt="{{ alt }}"
+        /><br>
+      </div>
+    {% endif %}
+
+    {{ content | safe }}
+
+    <div class="post__footer">
+        {%- for tag in tags | filterTagList %}
+          {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <div class="post-tags">
+            <a href="{{ tagUrl | url }}" class="post-tags__link">#{{ tag }}</a>
+          </div>
+        {%- endfor %}
+    </div>
+
+  </div>
+
+  <div class="post-comments"></div>
+
+  <div class="post-links">
+    {%- if collections.posts %}
+      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {%- if nextPost or previousPost %}
+        <div class="post-links__buttons">
+          {%- if nextPost %}
+            <button
+              class="btn btn--post-links btn--post-links-left"
+              onclick="location.href = '{{ nextPost.url | url }}'"
+              title="Clique para ver postagem anterior"
+            >
+              <svg 
+                class="btn__icon btn__icon--post-links btn__icon--post-links-left" 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" height="16" 
+                fill="currentColor" 
+                viewBox="0 0 16 16"
+              >
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+              {{ nextPost.data.title }}
+            </button>
+          {% endif %}
+          {%- if previousPost %}
+            <button
+              class="btn btn--post-links btn--post-links-right"
+              onclick="location.href = '{{ previousPost.url | url }}'"
+              title="Clique para ver postagem seguinte"
+            >
+              {{ previousPost.data.title }}
+              <svg 
+                class="btn__icon btn__icon--post-links btn__icon--post-links-right" 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" height="16" 
+                fill="currentColor" 
+                viewBox="0 0 16 16"
+              >
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          {% endif %}
+        </div>
+      {%- endif %}
+    {%- endif %}
+  </div>
+</article>
+
+{% include "author.njk" %}

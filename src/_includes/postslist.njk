@@ -1,0 +1,45 @@
+{% for post in postslist | reverse %}
+  <div
+    class="post-card content-box"
+  >
+    {% if post.data.cover_img %}
+      <div class="post-card__header">
+        <img
+          class="post-card__image"
+          src="{{ post.data.cover_img }}"
+          alt="{{ post.data.alt }}"
+        />
+      </div>
+    {% endif %}
+    <div class="post-card__content">
+      <h2 class="post-card__title">
+        {{ post.data.title }}
+      </h2>
+
+      <p class="post-card__description">
+        {{ post.data.description }}
+      </p>
+
+      <time class="post-meta" datetime="{{ post.date | htmlDateString }}">
+        Postado em {{ post.date | readableDate }}.
+      </time>
+
+      <div class="post-card__tags">
+        <div class="post-tags" title="Clique para ver mais postagens dessa tag">
+          {% for tag in post.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <a
+            class="post-tags__link"
+            href="{{ tagUrl | url }}"
+            title="Clique para ver mais postagens dessa tag"
+          >
+            <span>#</span> {{ tag }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <a tabindex="0" class="post-card__link" href="{{ post.url | url }}">Link</a>
+    </div>
+  </div>
+{% endfor %}

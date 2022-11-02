@@ -1,0 +1,34 @@
+.author {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    padding: calc(var(--space) / 2) 0;
+}
+
+.author__image {
+    border-radius: 100%;
+    width: 115px;
+    height: 115px;
+    margin-bottom: .5em;
+}
+
+/* Make  things smaller for mobile */
+@media screen and (max-width: 650px) {
+  .author__image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.author__intro {
+    opacity: 0.8;
+}
+
+.author__site-title {
+    font-size: 1.5em;
+}
+
+.author__buttons {
+    margin-top: -0.5em;
+    fill: var(--body-color);
+}
