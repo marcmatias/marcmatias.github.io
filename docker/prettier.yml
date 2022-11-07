@@ -1,5 +1,5 @@
 services:
   app:
-    command: npm run build
+    command: npm run prettier
     volumes:
       - ".:/app"
