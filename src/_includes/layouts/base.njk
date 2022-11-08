@@ -20,7 +20,7 @@
     <header>
       <nav>
         <div class="header__left">
-          {% if templateClass === "tmpl-post" %}
+          {% if templateClass === "tmpl-post" or templateClass === "tmpl-tags"  %}
           <button
             onclick="location.href = '/'"
             class="btn btn--nav btn--nav-back-button"
@@ -87,7 +87,6 @@
         </svg>
       </a>
     </footer>
-    
     <script src="/assets/js/footer-date.js"></script>
     <!-- Current page: {{ page.url | url }} -->
   </body>
