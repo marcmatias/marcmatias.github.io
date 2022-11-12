@@ -6,8 +6,9 @@
   outline-color: transparent;
   outline-offset: 0rem;
   transition:
-    color .6s,
-    background-color .6s,
+    background-color .3s,
+    box-shadow  .3s ease-in-out,
+    color 50ms,
     opacity .3s ease-in-out,
     outline-color .3s ease-in-out,
     outline-offset .3s ease-in-out;
