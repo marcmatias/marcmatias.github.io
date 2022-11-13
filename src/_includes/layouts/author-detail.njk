@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+<article class="post">
+  <div class="post content-box">
+    <div class="author author--detail">
+      {% if metadata.author.image %}
+        <img
+          alt="Author img"
+          class="author__image"
+          src="/assets/images/author.webp"
+          alt="Author image"
+        />
+      {% endif %}
+
+      <h1 class="author__site-title">{{ metadata.author.name }}</h1>
+      <p class="author__intro">
+        {{ metadata.author.bio }}.
+      </p>
+    </div>
+    {{ content | safe }}
+
+  </div>
+</article>

@@ -13,25 +13,25 @@ _Guia com os comandos necessários para atualizar o fork com comando rebase._
 
 1. Set o upstream caso já não o tenha setado
 
-```diff-js
+```bash
 git remote add upstream https://github.com/original-repo/goes-here.git
 ```
 
 2. Pegue todas as modificações e branches do upstream
 
-```diff-js
+```bash
 git fetch upstream
 ```
 
 3. Com rebase reescrevemos a nossa master com o que foi baixado no passo anterior
 
-```diff-js
+```bash
 git rebase upstream/master
 ```
 
 4. Agora é _**pushar**_ as mudanças do clone local para o repositório fork no Git
 
-```diff-js
+```bash
 git push origin master
 ```
 

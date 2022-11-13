@@ -3,7 +3,7 @@ help:	## List all make commands
 	@echo ' '
 
 clean:	## Clear build files
-	rm -rf dist/
+	rm -rf _site/
 
 watch:	## Runs a lite-server with examples accessible in http://localhost:3000
 	docker compose -f docker-compose.yml -f docker/watch.yml up

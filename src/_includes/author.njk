@@ -10,9 +10,11 @@
 
   <h1 class="author__site-title">{{ metadata.author.nickname }}</h1>
 
-  <p class="author__intro">
-    {{ metadata.author.bio }}.
-  </p>
+  <div class="author__intro">
+    <button class="author__button" onclick="location.href = '/author'" title="Clique para ver mais detalhes">
+     {{ metadata.author.bio }}.
+    </button>
+  </div>
 
   {% if metadata.author.social | length %}
     <div class="author__social">

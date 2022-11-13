@@ -21,17 +21,33 @@
 }
 
 .author__intro {
-  opacity: 0.8;
   margin-bottom: 1rem;
 }
 
 .author__site-title {
+  margin: 0rem 0rem 1rem;
   font-size: 1.5em;
 }
 
-.author__buttons {
-  margin-top: -0.5em;
-  fill: var(--body-color);
+.author__button {
+  background-color: transparent;
+  border: none;
+  color: var(--body-color);
+  cursor: pointer;
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+.author__button {
+  background-color: transparent;
+  border: none;
+  color: var(--body-color);
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.author__button:hover {
+  opacity: 0.6;
 }
 
 .author__social {
@@ -42,4 +58,9 @@
 
 .author__link {
   text-decoration: none;
+}
+
+.author--detail {
+  padding-top: calc(var(--space) / 3);
+  padding-bottom: calc(var(--space) / 4);
 }
