@@ -3,11 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-      {% set title_complete=metadata.title + " | " + title %}
-    {% else %}
-      {% set title_complete=metadata.title %}
-    {% endif %}
+    {% if title %} {% set title_complete=metadata.title + " | " + title %} {% else %} {% set title_complete=metadata.title %} {% endif %}
     <title>
       {{ title_complete }}
     </title>
@@ -16,7 +12,7 @@
     {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
     {#- <meta name="generator" content="{{ eleventy.generator }}"> #}
 
-    <link rel="icon" type="image/x-icon" href="../../assets/images/author.webp">
+    <link rel="icon" type="image/x-icon" href="{{ metadata.url + '/assets/images/favicon.ico' }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -25,18 +21,12 @@
     <!-- Dark theme script -->
     <script src="/assets/js/theme-toggle.js"></script>
 
+    {% if cover %} {% set image_cover=metadata.url + cover %} {% else %} {% set image_cover=metadata.url + '/assets/images/author.webp' %} {% endif %}
     <!-- Open graph -->
     <meta property="og:title" content="{{ title_complete }}">
     <meta property="og:description" content="{{ description or metadata.description }}">
     <meta property="og:type" content="article">
-    <meta
-      property="og:image"
-      {% if cover %}
-        content="{{ metadata.url + cover }}"
-      {% else %}
-        content="{{ metadata.url + '/assets/images/author.webp' }}"
-      {% endif %}
-    />
+    <meta property="og:image" content="{{ image_cover }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
 
@@ -45,14 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="{{ metadata.author.nickname }}">
     <meta name="twitter:description" content="{{ description or metadata.description }}">
-    <meta
-      name="twitter:image"
-      {% if cover %}
-        content="{{ metadata.url + cover }}"
-      {% else %}
-        content="{{ metadata.url + '/assets/images/author.webp' }}"
-      {% endif %}
-    >
+    <meta name="twitter:image" content="{{ image_cover }}" >
     <meta name="twitter:creator" content="{{ metadata.author.nickname }}">
 
     {% if env.isProd %}
