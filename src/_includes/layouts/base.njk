@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
+    <title>
+      {% if title %} {{ metadata.title + " | " + title }} {% else %} {{ metadata.title }} {% endif %}
+    </title>
     <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="description" content="{{ description or title }}">
 
     {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
     {#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -17,6 +20,52 @@
 
     <!-- Dark theme script -->
     <script src="/assets/js/theme-toggle.js"></script>
+
+    <!-- Open graph -->
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or title }}">
+    <meta property="og:type" content="article">
+    <meta
+      property="og:image"
+      {% if cover %}
+        content="{{ metadata.url + cover }}"
+      {% else %}
+        content="{{ metadata.url + '/assets/images/author.webp' }}"
+      {% endif %}
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ metadata.author.nickname }}">
+    <meta name="twitter:description" content="{{ description or title }}">
+    <meta
+      name="twitter:image"
+      {% if cover %}
+        content="{{ metadata.url + cover }}"
+      {% else %}
+        content="{{ metadata.url + '/assets/images/author.webp' }}"
+      {% endif %}
+    >
+    <meta name="twitter:creator" content="{{ metadata.author.nickname }}">
+
+    {% if env.isProd %}
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232324681-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-232324681-1');
+      </script>
+    {% endif %}
+    {% if ignore %}
+      <meta name="robots" content="noindex"/>
+    {% endif %}
+
   </head>
   <body>
     <header>

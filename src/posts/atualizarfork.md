@@ -5,7 +5,7 @@ date: 2021-04-03
 tags:
   - Git
   - Programação
-cover_img: "/assets/images/covers/three.jpg"
+cover: "/assets/images/covers/three.jpg"
 alt: Árvore com muitos galhos
 layout: layouts/post.njk
 ---

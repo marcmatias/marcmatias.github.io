@@ -9,7 +9,19 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 
+const metadata = JSON.parse(fs.readFileSync('./src/_data/metadata.json'));
+
+const environment = process.env.ELEVENTY_ENV;
+const PROD_ENV = 'prod';
+const prodUrl = metadata.url;
+const devUrl = 'http://localhost:8080';
+const baseUrl = environment === PROD_ENV ? prodUrl : devUrl;
+const isProd = environment === PROD_ENV;
+
 module.exports = function(eleventyConfig) {
+  environment;
+  isProd;
+
   // Copy the `image` and `js` folders to the output
   eleventyConfig.addPassthroughCopy("src/assets");
 
@@ -98,7 +110,8 @@ module.exports = function(eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid"
+      "liquid",
+      "txt"
     ],
 
     // Pre-process *.md files with: (default: `liquid`)

@@ -4,7 +4,7 @@ date: "2020-08-30"
 description: "Esta é a minha primeira postagem neste blog. Em breve trarei mais conteúdo para essa área da página."
 tags: 
   - HelloWorld
-cover_img: "/assets/images/covers/hello-world.jpg"
+cover: "/assets/images/covers/hello-world.jpg"
 alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
 ---

@@ -8,7 +8,8 @@ tags:
 layout: layouts/post.njk
 ---
 
-Apanhado de músicas que encontrei no youtube que vale a pena ser guardadas para ouvir mais vezes
+Apanhado de músicas que encontrei no youtube que vale a pena ser guardadas para
+ouvir mais vezes
 
 _Segue alguns vídeos que encontrei no youtube com ótimas trilhas:_
 

@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "build": "npx @11ty/eleventy",
+    "build": "ELEVENTY_ENV=prod npx @11ty/eleventy",
     "debug": "DEBUG=* npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx @11ty/eleventy --serve",
-    "watch": "npx @11ty/eleventy --watch"
+    "watch": "ELEVENTY_ENV=dev npx @11ty/eleventy --watch",
+    "deploy": "push-dir --dir=.output/public --branch=gh-pages --dotfiles --cleanup"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
@@ -24,6 +25,7 @@
     "postcss": "^8.4.18",
     "postcss-import": "^15.0.0",
     "postcss-nesting": "^10.2.0",
-    "postcss-preset-env": "^7.8.2"
+    "postcss-preset-env": "^7.8.2",
+    "push-dir": "^0.4.1"
   }
 }
