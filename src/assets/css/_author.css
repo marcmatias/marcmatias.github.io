@@ -44,7 +44,7 @@
   color: var(--body-color);
   cursor: pointer;
   font-size: 1em;
-  width: 85%;;
+  max-width: 450px;
 }
 
 .author__button:hover {
@@ -55,6 +55,7 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 .author__link {

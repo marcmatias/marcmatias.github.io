@@ -1,6 +1,7 @@
 .post-card {
   margin-bottom: var(--space);
   position: relative;
+  margin-top: 2rem;
 }
 
 .post-card:hover {
