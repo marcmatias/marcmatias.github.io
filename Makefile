@@ -8,9 +8,8 @@ clean:	## Clear build files
 watch:	## Runs a lite-server with examples accessible in http://localhost:3000
 	docker compose -f docker-compose.yml -f docker/watch.yml up
 
-bundle: ## Make a bundle local instalable pakage '.tgz'
+build: ## Make a build _site/ folder content with site project
 	docker compose -f docker-compose.yml -f docker/build.yml up
-	yarn pack
 
 eslint: ## Run eslint
 	docker compose -f docker-compose.yml -f docker/eslint.yml up

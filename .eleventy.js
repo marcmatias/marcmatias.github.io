@@ -11,19 +11,10 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 
 const metadata = JSON.parse(fs.readFileSync('./src/_data/metadata.json'));
 
-const environment = process.env.ELEVENTY_ENV;
-const PROD_ENV = 'prod';
-const prodUrl = metadata.url;
-const devUrl = 'http://localhost:8080';
-const baseUrl = environment === PROD_ENV ? prodUrl : devUrl;
-const isProd = environment === PROD_ENV;
-
 module.exports = function(eleventyConfig) {
-  environment;
-  isProd;
-
   // Copy the `image` and `js` folders to the output
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
   // Add plugins
 

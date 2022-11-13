@@ -9,7 +9,7 @@
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx @11ty/eleventy --serve",
     "watch": "ELEVENTY_ENV=dev npx @11ty/eleventy --watch",
-    "deploy": "push-dir --dir=.output/public --branch=gh-pages --dotfiles --cleanup"
+    "deploy": "push-dir --dir=_site --branch=gh-pages --dotfiles --cleanup"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
