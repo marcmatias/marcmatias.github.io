@@ -35,7 +35,9 @@ git rebase upstream/master
 git push origin master
 ```
 
-5. Na página do repositório fork no github será possível ver a informação de que agora está seu estado é de _even (in sync)_, ou seja, sincronizado com o repositório de origem.
+5. Na página do repositório fork no github será possível ver a informação de que
+agora seu estado é de _even (in sync)_, ou seja, sincronizado com o
+repositório de origem.
 
 ## Fontes
 

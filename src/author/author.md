@@ -12,8 +12,8 @@ layout: layouts/author-detail.njk
 
 O curso foi concedido pelo Serviço Nacional de Aprendizagem Comercial - PB, SENAC,
 Brasil e teve em seu componente curricular a teoria e prática profissional no
-desenvovlimento de sistemas com PHP na lógica e interface do projeto e Mysql em
-sua base de dados.
+desenvovlimento de sistemas com PHP na lógica, CSS na interface do projeto e Mysql
+em sua base de dados.
 
 ### Bacharel Sistemas Para Internet
 
