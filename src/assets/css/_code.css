@@ -16,7 +16,13 @@ pre {
 }
 
 code {
+  font-weight: 500;
   font-size: 0.95em;
+}
+
+code:not([class]) {
+  padding: 0 .5rem;
+  background-color: var(--bg-code);
 }
 
 code,
@@ -97,7 +103,6 @@ pre {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
-  background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,

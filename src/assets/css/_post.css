@@ -1,3 +1,8 @@
+.post img:not(.post-card__image) {
+  border-radius: var(--radius);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
 .post__header {
   width: calc(100% + var(--space) * 2);
   margin-left: calc(var(--space) * -1);
@@ -8,7 +13,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-  height: 80vw;
+  max-height: 644px;
+  min-height: 40vw;
   font-size: 0.9em;
   max-height: 780px;
 }

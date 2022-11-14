@@ -28,7 +28,7 @@
 }
 
 .post-card__image {
-  min-width: 100%;
+  width: 100%;
 }
 
 .post-card__title {

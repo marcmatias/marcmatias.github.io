@@ -3,13 +3,12 @@ const fs = require("fs");
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require("markdown-it-attrs");
 const pluginPostCss = require("eleventy-plugin-postcss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-
-const metadata = JSON.parse(fs.readFileSync('./src/_data/metadata.json'));
 
 module.exports = function(eleventyConfig) {
   // Copy the `image` and `js` folders to the output
@@ -73,7 +72,12 @@ module.exports = function(eleventyConfig) {
     permalink: markdownItAnchor.permalink.headerLink(),
     level: [1,2,3,4],
     slugify: eleventyConfig.getFilter("slugify")
-  });
+  }).use(
+    markdownItAttrs
+  ).disable(
+    "code"
+  );
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Override Browsersync defaults (used only with --serve)
