@@ -16,11 +16,17 @@
   margin-top: calc(var(--space) * -1);
   overflow: hidden;
   border-radius: var(--radius) var(--radius) 0 0;
-  max-height: 600px;
+  max-height: 400px;
   min-height: 200px;
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .post-card__header {
+    max-height: 250px;
+  }
 }
 
 .post-card__header:empty {
