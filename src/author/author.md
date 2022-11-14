@@ -1,5 +1,5 @@
 ---
-title: "Marcel Marques Matias"
+title: "Experiências e qualificações"
 description: "Marcel Marques desenvolvedor de softwares, bacharel em Sistemas para Internet. Nesse link veja mais sobre minhas qualificações e experiências."
 layout: layouts/author-detail.njk
 ---
