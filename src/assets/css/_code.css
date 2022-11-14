@@ -7,12 +7,27 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  */
 
 pre {
-  padding: calc(var(--space) / 2);
+  padding: 2.5rem;
   font-size: 0.85em;
   background-color: var(--bg-code);
   margin-bottom: 2em;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+}
+
+pre::-webkit-scrollbar {
+  height: .3rem;
+  width: .1rem;
+  background: var(--bg-code);
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--body-color);
+  -webkit-border-radius: .25rem;
+}
+
+pre::-webkit-scrollbar-corner {
+    background: #000;
 }
 
 code {
