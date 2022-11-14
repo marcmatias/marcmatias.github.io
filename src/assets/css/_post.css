@@ -13,8 +13,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-  max-height: 644px;
-  min-height: 40vw;
+  max-height: 600px;
+  min-height: 200px;
   font-size: 0.9em;
   max-height: 780px;
 }
@@ -35,6 +35,8 @@
 
 .post__footer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0rem .01rem;
 }
 
 .post__content img {
