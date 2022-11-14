@@ -12,7 +12,7 @@ alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
 ---
 
-## Introdução
+## Bash
 
 **Resultado:** &nbsp; [Ver imagem do resultado](#resultado)\
 **TLDR:** &nbsp; [Por a mão na massa, configurar](#configuracao)
@@ -26,7 +26,8 @@ Na utilização do Linux em geral é bem comum termos que utilizar o bash para f
 instalação ou manutenção de algum tipo no sistema. Mesmo para usuários(as) com
 uso mais focado em aplicativos com interface gráfica.
 
-Em sua versão padrão/default no [ArchLinux](https://archlinux.org/) que é o sistema
+Em sua versão padrão/default no
+[ArchLinux](https://archlinux.org/){target="_blank"} que é o sistema
 operacional que costumo mais utilizar esse é o modo como se apresenta:
 
 ![Bash padrão Archlinux](/assets/images/content/bashtheme/bash-default-archlinux.png)
@@ -35,7 +36,7 @@ Na imagem acima vemos em ordem respectiva
 
 - Usuário: ***marcmatias***
 - Nome da máquina: ***avalon***
-- Símbolo: ***~***
+- Símbolo diretório home: ***~***
   - Que refere a pasta /home/nome-do-usuário-logado
 
 Como podemos ver não tem cores sendo aplicadas nas letras e estão todas envoltas
