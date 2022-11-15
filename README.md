@@ -1,13 +1,13 @@
-# Marcmatias webpage e blog
+# Marcmatias webpage blog
 
-Minha página pessoal disponível em: [https://marcmatias.github.io](https://marcmatias.github.io)
+Minha página pessoal [https://marcmatias.github.io](https://marcmatias.github.io)
 
 ## Como é feito
 
-Site desenvolvido utilizado como base a própria documentação do 11ty. No tema a
-referência foram os estilos do gridsome-blog-starter um starter para projeto
-utilizando Gridsome e a metodologia BEM foi utilizada na escrita e organização
-do CSS.
+Site desenvolvido utilizando como base a própria documentação do 11ty. No tema a
+referência foram os estilos do gridsome-blog-starter (starter para projeto
+Gridsome) e a metodologia BEM foi utilizada na escrita e organização dos arquivos
+CSS.
 
 ## Links relevantes
 
@@ -17,5 +17,6 @@ do CSS.
 - Estrutura e código: [https://github.com/11ty/eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
 
 ### Gerador e Metodologia
+
 - 11ty: [https://www.11ty.dev/](https://www.11ty.dev/)
 - BEM: [https://getbem.com/introduction/](https://getbem.com/introduction/)
