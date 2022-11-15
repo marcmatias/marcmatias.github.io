@@ -48,12 +48,10 @@ esse texto mais interessante e fácil de interpretar.
 Vamos adicionar o código abaixo no arquivo *~/.bashrc*
 
 ```bash
-# Essa função exibe o nome da branch atual quando estamos na pasta de um repositório
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'
 }
 
-# A linha abaixo organiza e colore o bash
 PS1='\[\e[1;34m\]\W\[\e[0m\]\[\e[1;33m\] $(git_branch)\[\e[1;30m\]\$\[\e[0m\] '
 ```
 
@@ -107,3 +105,6 @@ Costumo utilizar os comandos
 
 Por isso opto por só exibir o que é essencial na linha de comando deixando mais
 espaço em tela para escrita e retorno de resultados dos comandos e programas executados.
+
+Meu arquivo `.bashrc` completo pode ser encontrado no repositório [dot-files](https://github.com/marcmatias/linux-dot-files){target="_blank"}
+com outras configurações de outros aplicativos que costumo utilizar.
