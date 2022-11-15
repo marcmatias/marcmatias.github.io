@@ -1,8 +1,22 @@
 ---
 layout: layouts/home.njk
+templateClass: tmpl-index
 ---
 
 {% include "author.njk" %}
 
-{% set postslist = collections.posts %}
+{% set maxPosts = collections.posts.length | min(3) %}
+
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
+
+<div class="content-buttons">
+  <button
+    class="btn btn--post-links btn--post-links-right"
+    onclick="location.href = '{{ '/posts/' | url }}'"
+    title="Clique para ver postagem seguinte"
+  >
+  Ver todas as postagens
+  </button>
+</div>

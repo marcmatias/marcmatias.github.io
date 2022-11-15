@@ -38,7 +38,7 @@ templateClass: tmpl-post
 
   <div class="post-comments"></div>
 
-  <div class="post-links">
+  <div class="content-buttons">
     {%- if collections.posts %}
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}

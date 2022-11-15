@@ -58,7 +58,7 @@
     <header>
       <nav>
         <div class="header__left">
-          {% if templateClass === "tmpl-post" or templateClass === "tmpl-tags"  %}
+          {% if templateClass in ["tmpl-post", "tmpl-tags", "tmpl-archive"]  %}
           <button
             onclick="location.href = '/'"
             class="btn btn--nav btn--nav-back-button"

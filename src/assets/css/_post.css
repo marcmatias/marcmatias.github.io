@@ -62,12 +62,6 @@
   margin-top: calc(var(--space) / 2);
 }
 
-.post-links {
-  padding: 1rem 0rem;
-  max-width: var(--content-width);
-  margin: 0 auto;
-}
-
 .post-links__buttons {
   display: flex;
   gap: .5rem;

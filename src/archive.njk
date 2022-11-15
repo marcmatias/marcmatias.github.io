@@ -1,0 +1,10 @@
+---
+permalink: /posts/
+layout: layouts/home.njk
+templateClass: tmpl-archive
+---
+
+<h1 class="main-title" >Arquivo</h1>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
