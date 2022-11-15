@@ -66,7 +66,7 @@ Para melhor compreensão do que foi digitado acima:
 - **`$`** faz com que esse símbolo seja exibido ao final da linha do **`PS1`**
 - Demais elementos são configurações de cores e tipos de fonte
 
-Abaixo as cores que podemos utilizar com fontes Bold e Regulares
+Abaixo, uma lista de cores que podemos utilizar com fontes Bold e Regulares
 
 ```bash
 txtblk='\e[0;30m' # Black - Regular
@@ -91,20 +91,19 @@ bldwht='\e[1;37m' # White
 
 ## Resultado
 
-Agora vamos ver o resultado obtido (acessei a pasta de um projeto para que
-possamos ver também o nome de uma branch aparecendo)
+Agora vamos ver o resultado obtido. Acessei a pasta de um projeto para que
+possamos ver além do nome da pasta o nome da branch atual
 
 ![Bash padrão Archlinux 2](/assets/images/content/bashtheme/bash-default-archlinux-2.png)
 
-Deixei que apenas o nome da pasta e do branch atual (quando estamos em uma
+Deixei apenas o nome da pasta e do branch atual (quando estamos em uma
 pasta de projeto git) fiquem sendo exibidos nas cores azul (para pastas) e
 amarelo (para repositórios).
 
 Costumo utilizar os comandos
 
-- `pwd` para saber para ver o endereço completo qual o caminho completo para a
-pasta em que estou
-- `whoami` para ver qual o usuário atual que estou logado.
+- `pwd` para ver qual o caminho completo para a pasta em que estou
+- `whoami` para ver qual o usuário atual que estou logado
 
-Por isso opto por exibir só o que é essencial na linha de comando, deixando mais
+Por isso opto por só exibir o que é essencial na linha de comando deixando mais
 espaço em tela para escrita e retorno de resultados dos comandos e programas executados.
