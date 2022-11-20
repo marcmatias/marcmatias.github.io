@@ -20,11 +20,11 @@
   margin-top: calc(var(--space) * -1);
   overflow: hidden;
   border-radius: var(--radius) var(--radius) 0 0;
-  max-height: 400px;
-  min-height: 200px;
+  height: 400px;
   display: flex;
   align-items: center;
   text-align: center;
+  background-color: rgba(100, 100, 100, .1);
 }
 
 @media screen and (max-width: 650px) {

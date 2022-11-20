@@ -1,3 +1,4 @@
+/* Any image thats not header post image */
 .post img:not([class]) {
   border-radius: var(--radius);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -13,12 +14,18 @@
   display: flex;
   align-items: center;
   text-align: center;
-  max-height: 600px;
-  min-height: 200px;
+  min-height: 600px;
   font-size: 0.9em;
   max-height: 780px;
+  background-color: rgba(100, 100, 100, .1);
 }
 
+/* Make  things smaller for mobile */
+@media screen and (max-width: 650px) {
+  .post__header {
+    min-height: 280px;
+  }
+}
 .post__header img {
   width: 100%;
 }
