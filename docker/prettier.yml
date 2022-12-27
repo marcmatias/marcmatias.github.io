@@ -1,5 +1,0 @@
-services:
-  app:
-    command: npm run prettier
-    volumes:
-      - ".:/app"

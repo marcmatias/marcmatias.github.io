@@ -3,22 +3,22 @@ help:	## List all make commands
 	@echo ' '
 
 clean:	## Clear build files
-	rm -rf _site/
+	rm -rf dist/
 
-watch:	## Runs a lite-server with examples accessible in http://localhost:3000
-	docker compose -f docker-compose.yml -f docker/watch.yml up
+up:	## Up container to use
+	docker compose up -d
 
-build: ## Make a build _site/ folder content with site project
-	docker compose -f docker-compose.yml -f docker/build.yml up
-
-eslint: ## Run eslint
-	docker compose -f docker-compose.yml -f docker/eslint.yml up
-
-prettier: ## Run prettier
-	docker compose -f docker-compose.yml -f docker/prettier.yml up
-
-interact: ## Get access to /bin/sh interactive mode
-	docker compose -f docker-compose.yml -f docker/interactive.yml up -d
-	docker exec -it 11ty_dev /bin/sh
+stop:   ## Stop container
 	docker stop 11ty_dev
 
+watch:	## Runs a lite-server with examples accessible in http://localhost:3000
+	docker exec -it 11ty_dev sh -c "yarn watch & yarn run serve & wait -n"
+
+eslint: ## Run eslint
+	docker exec 11ty_dev sh -c "yarn run eslint"
+
+prettier: ## Run prettier
+	docker exec 11ty_dev sh -c "yarn run prettier"
+
+interact: ## Get access to /bin/sh interactive mode
+	docker exec -it 11ty_dev /bin/sh

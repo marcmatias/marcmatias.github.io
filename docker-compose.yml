@@ -2,12 +2,12 @@ version: "3"
 
 services:
   app:
-    build:
-      context: ./
-      dockerfile: ./docker/dev/Dockerfile
+    build: .
     user: "1000:1000"
+    stdin_open: true
     container_name: 11ty_dev
     ports:
       - "8080:8080"
     volumes:
+      - ".:/app"
       - "/app/node_modules"
