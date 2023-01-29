@@ -4,7 +4,6 @@ date: "2022-11-13"
 description: "Tema que utilizo no bash, linha de comando, para facilitar uso e interpretação de interações com sistema."
 tags:
   - Linux
-  - Programação
   - Bash
   - Linha de comando
 cover: "/assets/images/covers/line-command.jpg"

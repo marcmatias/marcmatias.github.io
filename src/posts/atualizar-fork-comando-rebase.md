@@ -4,7 +4,7 @@ description: Guia com os comandos necessários para atualizar o fork com comando
 date: 2021-04-03
 tags:
   - Git
-  - Programação
+  - Linha de comando
 cover: "/assets/images/covers/three.jpg"
 alt: Árvore com muitos galhos
 layout: layouts/post.njk

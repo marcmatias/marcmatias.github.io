@@ -4,6 +4,7 @@ description: Guia com os comandos e setups necessários para instalar ArchLinux
 date: 2023-01-29
 tags:
   - ArchLinux
+  - Linux
 cover: "/assets/images/covers/Archlinux.png"
 alt: Logo do ArchLinux
 layout: layouts/post.njk
