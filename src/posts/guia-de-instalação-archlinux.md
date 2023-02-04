@@ -121,7 +121,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 
 # Setamos o nome da máquina
-`echo avalon > /etc/hostname`
+echo avalon > /etc/hostname
 ```
 
 Criamos o `/etc/hosts` com
