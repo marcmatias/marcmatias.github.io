@@ -84,7 +84,13 @@ pacman -S reflector
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
 # Geração de nova lista com reflector
-reflector -c "US" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country 'Brazil' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+
+# --verbose - Exibe logs mais completos
+# --country Brazil - A minha localização atual de onde deve vir os espelhos para download
+# --l 5 - pega os 5 melhores espelhos do Brasil
+# --sort rate - organiza pelo download mais rápido
+# --save - salva os espelhos em /etc/pacman-d/mirrorlist
 ```
 
 ## Instalação do ArchLinux
