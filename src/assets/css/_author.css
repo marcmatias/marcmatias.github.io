@@ -2,7 +2,7 @@
   margin: 0 auto;
   max-width: 500px;
   text-align: center;
-  padding: calc(var(--space) / 1.5) 0;
+  padding: calc(var(--space) / 3) 0;
 }
 
 .author__image {

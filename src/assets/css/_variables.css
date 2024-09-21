@@ -1,6 +1,6 @@
 /* Light default theme */
 html {
-  --base-font-size: 20px;
+  --base-font-size: 18px;
   --bg-color: #f3f7f9;
   --bg-content-color: #fff;
   --bg-code: #fffbf3;
@@ -11,15 +11,17 @@ html {
   --text-selection: #fff;
   --bg-selection: #0000e2;
   --space: 3.5rem;
-  --content-width: 860px;
+  --space-sm: 1.5rem;
+  --content-width: 992px;
+  --content-width--multiple: 860px;
   --header-height: 80px;
   --radius: 5px;
 }
 
 /* Make  things smaller for mobile */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   html {
-    --base-font-size: 17px;
+    --base-font-size: 16px;
   }
   body {
     --space: 1.5rem;

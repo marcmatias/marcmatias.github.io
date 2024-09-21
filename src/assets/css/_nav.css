@@ -9,7 +9,7 @@ header {
   pointer-events: none;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   /* Make header sticky for large screens */
   header {
     position: sticky;

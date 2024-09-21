@@ -25,18 +25,17 @@ Na utilização do Linux em geral é bem comum termos que utilizar o bash para f
 instalação ou manutenção de algum tipo no sistema. Mesmo para usuários(as) com
 uso mais focado em aplicativos com interface gráfica.
 
-Em sua versão padrão/default no
-[ArchLinux](https://archlinux.org/){target="_blank"} que é o sistema
-operacional que costumo mais utilizar esse é o modo como se apresenta:
+Eu utilizo [Arch Linux](https://archlinux.org/){target="_blank"} com [KDE](https://kde.org/) e com o emulador de terminal [Konsole](https://konsole.kde.org/).
+Esse é o modo como se apresenta nesse setup:
 
-![Bash padrão Archlinux](/assets/images/content/bashtheme/bash-default-archlinux.png)
+![Bash padrão Arch linux](/assets/images/content/bashtheme/bash-default-archlinux.png)
 
 Na imagem acima vemos em ordem respectiva
 
 - Usuário: ***marcmatias***
 - Nome da máquina: ***avalon***
 - Símbolo diretório home: ***~***
-  - Que refere a pasta /home/nome-do-usuário-logado
+  - Que refere a pasta `/home/nome-do-usuário-logado`
 
 Como podemos ver não tem cores sendo aplicadas nas letras e estão todas envoltas
 em colchetes. Isso é o que vamos mudar com as personalizações a seguir visando tornar
@@ -44,7 +43,7 @@ esse texto mais interessante e fácil de interpretar.
 
 ## Configuração
 
-Vamos adicionar o código abaixo no arquivo *~/.bashrc*
+Vamos adicionar o código abaixo no arquivo `~/.bashrc`
 
 ```bash
 git_branch() {
@@ -91,7 +90,7 @@ bldwht='\e[1;37m' # White
 Agora vamos ver o resultado obtido. Acessei a pasta de um projeto para que
 possamos ver além do nome da pasta o nome da branch atual
 
-![Bash padrão Archlinux 2](/assets/images/content/bashtheme/bash-default-archlinux-2.png)
+![Bash padrão Arch linux 2](/assets/images/content/bashtheme/bash-default-archlinux-2.png)
 
 Deixei apenas o nome da pasta e do branch atual (quando estamos em uma
 pasta de projeto git) fiquem sendo exibidos nas cores azul (para pastas) e

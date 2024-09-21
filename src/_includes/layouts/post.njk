@@ -11,7 +11,7 @@ templateClass: tmpl-post
     <time class="post-meta" datetime="{{ page.date | htmlDateString }}">Postado em {{ page.date | readableDate }}</time>
   </div>
 
-  <div class="post content-box">
+  <div class="post post__content-box content-box">
 
     {% if cover %}
       <div class="post__header">
@@ -37,8 +37,8 @@ templateClass: tmpl-post
   </div>
 
   <div class="post-comments"></div>
-
   <div class="content-buttons">
+    <span class="other-posts-title">Outras postagens</span>
     {%- if collections.posts %}
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}

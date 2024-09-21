@@ -1,17 +1,19 @@
 {% for post in postslist | reverse %}
   <div
-    class="post-card content-box {% if templateClass==='tmpl-index' %} post-card--index {% endif %}"
+    class="post-card content-box content--multiple {% if templateClass==='tmpl-index' %} post-card--index {% endif %}"
   >
-    {% if post.data.cover and templateClass in ["tmpl-index", "tmpl-tags"] %}
-      <div class="post-card__header">
-        <img
-          class="post-card__image"
-          src="{{ post.data.cover }}"
-          alt="{{ post.data.alt }}"
-        />
-      </div>
-    {% endif %}
+  {% if post.data.cover and templateClass in ["tmpl-index", "tmpl-tags"] %}
+    <div class="post-card__header">
+      <img
+        class="post-card__image"
+        src="{{ post.data.cover }}"
+        alt="{{ post.data.alt }}"
+      />
+    </div>
     <div class="post-card__content">
+  {% else %}
+    <div class="post-card__content post-card__content--no-image">
+  {% endif %}
       <h2 class="post-card__title">
         {{ post.data.title }}
       </h2>

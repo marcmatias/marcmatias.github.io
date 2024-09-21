@@ -1,18 +1,18 @@
 ---
-title: Guia de instalação ArchLinux
-description: Guia com os comandos e setups necessários para instalar ArchLinux
+title: Guia de instalação Arch Linux
+description: Guia com os comandos e setups necessários para instalar Arch Linux
 date: 2023-01-29
 tags:
-  - ArchLinux
+  - Arch Linux
   - Linux
 cover: "/assets/images/covers/Archlinux.png"
-alt: Logo do ArchLinux
+alt: Logo do Arch Linux
 layout: layouts/post.njk
 ---
 
 # Guia de instalação
 
-Após iniciar o disco de instalação veremos o console exibindo
+Após iniciar o disco de instalação veremos o console exibindo:
 
 ```bash
 root@archiso ~ #
@@ -26,37 +26,33 @@ Listamos os discos com `fdisk -l`
 
 Selecionamos um disco para particionar com `fdisk /dev/sda`
 
-Utilizando o comando “m” para ir vendo os comandos necessários para gerar as partições defini o particionamento como
+Utilizando o comando “m” para ir vendo os comandos necessários para gerar as partições defini o particionamento como:
 
-- `boot`
-- `/`
-- `home`
-- `swap`
-
-Foi necessário formatar as partições nos formatos necessários para cada tipo definido anteriormente
-
-- Boot EFI
 ```bash
+- boot # arquivos de boot
+- /    # arquivos de sistema linux e aplicativos instalados
+- home # pastas home de usuário do sistema
+- swap # memória virtual que aumenta memória real da máquina auxiliando RAM do computador
+```
+
+Foi necessário formatar as partições nos formatos necessários para cada tipo definido anteriormente (Substituir `xxx` por disco a ser formatado):
+
+```bash
+# Boot EFI
 mkfs.fat -F32 /dev/xxx
-```
-- `/` e `/home` com
-```bash
+
+# `/` e `/home` com
 mkfs.ext4 /dev/xxx
-```
 
-- `swap` com
-```bash
+# `swap` com
 mkswap /dev/xxx
-
 # definir swap com
 swapon /dev/xxx
 ```
 
 ## Ativar WIFI
 
-Para ligar a placa Wifi foi necessário executar comando `rfkill unblock wifi`
-
-Utilizaremos o iwctl para conectarmos a Wifi
+Para ligar a placa Wifi foi necessário executar comando `rfkill unblock wifi`. Utilizaremos o iwctl para conectarmos a Wifi:
 
 ```bash
 # Escaneamos a rede
@@ -72,9 +68,9 @@ station wlan0 connect "Name of Network/WiFi"
 exit
 ```
 
-Agora podemos sincronizar os pacotes do ArchLinux `pacman -Syy`
+Agora podemos sincronizar os pacotes do Arch Linux `pacman -Syy`
 
-É recomendável atualizar o mirrorlists com isso teremos os packages ArchLinux sendo baixados dos servidores mais rápidos possíveis em relação a nossa conexão com a rede (sugerido pelo guia do FOSS)
+É recomendável atualizar o mirrorlists com isso teremos os packages Arch Linux sendo baixados dos servidores mais rápidos possíveis em relação a nossa conexão com a rede (sugerido pelo guia do FOSS):
 
 ```bash
 # Instalação do reflector utilizado para a geração da lista
@@ -93,21 +89,24 @@ sudo reflector --verbose --country 'Brazil' -l 5 --sort rate --save /etc/pacman.
 # --save - salva os espelhos em /etc/pacman-d/mirrorlist
 ```
 
-## Instalação do ArchLinux
+## Instalação do Arch Linux
 
-Motamos a partição `/` na pasta `/mnt` com
+Motamos a partição `/` na pasta `/mnt` com:
+
 ```bash
 mount /dev/xxx /mnt
 ```
 
-E fazemos o download dos pacotes base do ArchLinux com
+E fazemos o download dos pacotes base do Arch Linux com:
+
 ```bash
 pacstrap /mnt base linux linux-firmware gvim
 ```
 
 A opção pelo gvim é para termos a copia pra o clipboard do X11. Desse modo vamos poder copiar no vim o colar diretamente em qualquer programa na interface que tivermos rodando e vice-versa.
 
-Seguimos com a configuração de partições, timezone e língua do sistema
+Seguimos com a configuração de partições, timezone e língua do sistema:
+
 ```bash
 # Devemos também montar outras partições como boot e home na `/mnt`. Geramos o fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -130,19 +129,22 @@ export LANG=en_US.UTF-8
 echo avalon > /etc/hostname
 ```
 
-Criamos o `/etc/hosts` com
+Criamos o `/etc/hosts` com:
+
 ```bash
 touch /etc/hosts
 ```
 
-E adicionamos nesse arquivo o seguinte conteúdo
+Adicionamos nesse arquivo o seguinte conteúdo:
+
 ```bash
 127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	substituir_pelo_nome_da_maquina
 ```
 
-Setamos o password do root com
+Setamos o password do root com:
+
 ```bash
 passwd
 ```
@@ -170,21 +172,22 @@ passwd marcmatias
 usermod -aG wheel,audio,video,storage marcmatias
 ```
 
-Editar aquivo `/etc/sudoers` para adicionar o conteúdo abaixo do campo `root ALL=(ALL) ALL`. Desse modo concedemos permissão de root através do comando sudo para este usuário
+Editar aquivo `/etc/sudoers` para adicionar o conteúdo abaixo do campo `root ALL=(ALL) ALL`. Desse modo concedemos permissão de root através do comando sudo para este usuário:
+
 ```bash
 marcmatias ALL=(ALL) ALL
 ```
 
 ## Instalação de WM (gerenciador gráfico)
 
-Optei por fazer a instalação do Plasma
+Optei por fazer a instalação do Plasma:
 
 ```bash
 pacman -S xorg networkmanager plasma plasma-wayland-session
 ```
 
 Vamos deixar ativado por padrão o gerenciador de logins e o network manager assim será
-possível acessar o sistema gráfico e utilizar a internet no primeiro acesso
+possível acessar o sistema gráfico e utilizar a internet no primeiro acesso:
 
 ```bash
 systemctl enable sddm.service
@@ -198,6 +201,9 @@ exit
 umount -l /mnt
 reboot
 ```
+
+A máquina vai reiniciar e já devemos agora receber o retorno da tela de boot (GRUB). Escolhendo a primeira opção devemos logo chegar até a tela de login do sistema (SDDM).
+
 ## Referências
-- [Archlinux Logo Wallpaper](https://wallpapercrafter.com/104246-archlinux-arch-linux-cyan-white-white-background-arch-linux.html)
+- [Arch linux Logo Wallpaper](https://wallpapercrafter.com/104246-archlinux-arch-linux-cyan-white-white-background-arch-linux.html)
 - [How to Install Arch Linux [Step by Step Guide] It's FOSS](https://itsfoss.com/install-arch-linux/)

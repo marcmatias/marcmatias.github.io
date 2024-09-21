@@ -4,6 +4,10 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
+.post__content-box {
+  padding: var(--space);
+}
+
 .post__header {
   width: calc(100% + var(--space) * 2);
   margin-left: calc(var(--space) * -1);
@@ -14,14 +18,13 @@
   display: flex;
   align-items: center;
   text-align: center;
+  font-size: 3.9em;
   min-height: 600px;
-  font-size: 0.9em;
-  max-height: 780px;
   background-color: rgba(100, 100, 100, .1);
 }
 
 /* Make  things smaller for mobile */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   .post__header {
     min-height: 280px;
   }
@@ -81,9 +84,11 @@
   }
 }
 
-.post-meta {
-  font-size: .8em;
+.other-posts-title {
+  display: block;
+  font-size: .9rem;
   opacity: .8;
+  margin: .5em 0 1.5em 0;
 }
 
 .btn--post-links {

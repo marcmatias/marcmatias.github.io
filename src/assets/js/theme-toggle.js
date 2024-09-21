@@ -17,7 +17,7 @@ function setThemeOnLoad() {
   if (colorScheme) {
     const html = document.querySelector('html');
 
-    if ( 
+    if (
       colorScheme === 'dark'
     ) {
       html.classList.add('dark');

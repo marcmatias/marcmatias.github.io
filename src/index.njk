@@ -14,7 +14,7 @@ type: website
 {% include "postslist.njk" %}
 
 {% if collections.posts.length > maxPosts %}
-  <div class="content-buttons">
+  <div class="content-buttons content--multiple">
     <button
       class="btn btn--post-links btn--post-links-right"
       onclick="location.href = '{{ '/posts/' | url }}'"

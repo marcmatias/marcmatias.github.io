@@ -1,5 +1,5 @@
 ---
-title: "Músicas"
+title: "Mix de músicas"
 date: "2021-04-03"
 description: "Músicas que encontrei no youtube que vale a pena ser guardadas para ouvir mais vezes."
 tags:
@@ -8,7 +8,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-Apanhado de músicas que encontrei no youtube que vale a pena ser guardadas para
+Mix de músicas que encontrei no Youtube que vale a pena serem guardadas para
 ouvir mais vezes
 
 _Segue alguns vídeos que encontrei no youtube com ótimas trilhas:_
