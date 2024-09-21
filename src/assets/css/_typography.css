@@ -61,11 +61,15 @@ em {
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
-  margin-bottom: 1.25em;
+  margin-top: .5em;
 }
 
 ul li {
   margin-bottom: .6em;
+}
+
+ul li::marker {
+  color: var(--list-disk-color);
 }
 
 ol {
