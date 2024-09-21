@@ -10,12 +10,12 @@
     "url_repo": "https://github.com/marcmatias/marcmatias.github.io",
     "nickname": "@marcmatias",
     "image": "assets/images/author.webp",
-    "bio": "Marcel Marques, desenvolvedor de softwares e bacharel em Sistemas para Internet.",
+    "bio": "Marcel Marques, desenvolvedor de sistemas e bacharel em Sistemas para Internet.",
     "social": {
+      "bluesky": "https://bsky.app/profile/marcmatias.bsky.social",
       "codepen": "https://codepen.io/marcmatias",
       "github": "https://github.com/marcmatias",
-      "linkedin": "https://www.linkedin.com/in/marcmatias",
-      "twitter": "https://twitter.com/@marcmatias"
+      "linkedin": "https://www.linkedin.com/in/marcmatias"
     }
   }
 }
