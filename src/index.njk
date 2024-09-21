@@ -7,9 +7,9 @@ type: website
 
 {% include "author.njk" %}
 
-{% set maxPosts = collections.posts.length | min(3) %}
+{% set maxPosts = collections.posts.length | min(5) %}
 
-{% set postslist = collections.posts | head(-3) %}
+{% set postslist = collections.posts | head(-5) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 
