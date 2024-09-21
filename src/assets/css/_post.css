@@ -24,13 +24,10 @@
 }
 
 /* Make  things smaller for mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .post__header {
-    min-height: 280px;
+    min-height: 200px;
   }
-}
-.post__header img {
-  width: 100%;
 }
 
 .post__header:empty {
