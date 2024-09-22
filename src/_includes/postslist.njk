@@ -1,6 +1,6 @@
 {% for post in postslist | reverse %}
   <div
-    class="post-card content-box content--multiple {% if templateClass==='tmpl-index' %} post-card--index {% endif %}"
+    class="post-card content-box content-multiple"
   >
   {% if post.data.cover and templateClass in ["tmpl-index", "tmpl-tags"] %}
     <div class="post-card__header">

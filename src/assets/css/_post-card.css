@@ -4,9 +4,6 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-}
-
-.post-card--index {
   margin-bottom: .5rem;
 }
 

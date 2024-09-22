@@ -15,6 +15,6 @@
   margin: 0 auto;
 }
 
-.content--multiple {
+.content-multiple {
   max-width: var(--content-width--multiple);
 }
