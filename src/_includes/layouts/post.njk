@@ -48,7 +48,7 @@ templateClass: tmpl-post
             <button
               class="btn btn--post-links btn--post-links-left"
               onclick="location.href = '{{ nextPost.url | url }}'"
-              title="Clique para ver postagem anterior"
+              title="Clique para ver postagem seguinte"
             >
               <svg
                 class="btn__icon btn__icon--post-links btn__icon--post-links-left"
@@ -69,7 +69,7 @@ templateClass: tmpl-post
             <button
               class="btn btn--post-links btn--post-links-right"
               onclick="location.href = '{{ previousPost.url | url }}'"
-              title="Clique para ver postagem seguinte"
+              title="Clique para ver postagem anterior"
             >
               {{ previousPost.data.title }}
               <svg
