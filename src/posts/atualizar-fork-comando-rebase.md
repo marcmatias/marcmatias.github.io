@@ -41,8 +41,8 @@ repositório de origem.
 
 ## Fontes
 
-- [https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a](https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a)
-- [https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/](https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/)
+- [https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a](https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a){target="_blank"}
+- [https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/](https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/){target="_blank"}
 
 _Photo by Felix Mittermeier from Pexels_
 

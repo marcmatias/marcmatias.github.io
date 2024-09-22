@@ -6,20 +6,22 @@ layout: layouts/author-detail.njk
 
 ## Qualificações
 
-### Programação para Internet (PHP MYSQL)
+### Programação para Internet (PHP MySQL)
 
 **Nov 2008 - Dez 2008**
 
 O curso foi concedido pelo Serviço Nacional de Aprendizagem Comercial - PB, SENAC,
 Brasil e teve em seu componente curricular a teoria e prática profissional no
-desenvovlimento de sistemas com PHP na lógica, CSS na interface do projeto e Mysql
+desenvolvimento de sistemas com PHP na lógica, CSS na interface do projeto e MySQL
 em sua base de dados.
 
 ### Bacharel Sistemas Para Internet
 
+[https://www.unipe.edu.br/graduacao/sistemas-para-internet](https://www.unipe.edu.br/graduacao/sistemas-para-internet/){target="_blank"}
+
 **Jan 2017 - Jul 2019**
 
-O curso ocorrido no  Centro Universitário de João Pessoa - UNIPÊ, buscou
+O curso concluído no Centro Universitário de João Pessoa - UNIPÊ, buscou
 equilibrar as habilidades técnicas(hard-skills) com as socioemocionais
 (soft skills), permitindo o desenvolvimento de competências que envolvem
 criatividade, colaboração, resolução de problemas, pensamento crítico,
@@ -35,17 +37,20 @@ transformação digital do mercado e apresente boa adequação as suas necessida
 
 Estágio Web Developer
 
-Estágiário de desenvolvimento web back-end e front-end. A Fábrica de Sowftare da
+Estagiário de desenvolvimento web back-end e front-end. A Fábrica de Sowftare da
 UNIPÊ tem como objetivo o desenvolvimento de projetos de pesquisa e extensão
 existentes no Centro Universitário de João Pessoa (UNIPÊ) e tambem com parceiros
 externos.
 
 Tecnologias mais utilizadas
 
+* Bootstrap
 * Django
 * Materialize
-* Bootstrap
 * Postgres
+* Git
+* WordPress
+* JavaScript
 
 ### Digivox
 
@@ -59,10 +64,13 @@ com foco nos sistemas web e de integração com telefonia, desenvolvido pela emp
 Tecnologias mais utilizadas
 
 * Java
-* Selenium
 * Redmine
+* Selenium
+* Git
 
 ### Pythonic Café
+
+[https://pythonic.cafe](https://pythonic.cafe/){target="_blank"}
 
 **Nov 2021 - atual**
 
@@ -77,11 +85,20 @@ bibliotecas que facilitam a interação, organização e usabilidade desses dado
 
 Tecnologias mais utilizadas
 
-* Python
-* Javascript
-* PHP
-* SQL
-* Django
 * Bootstrap
+* Django
+* Docker
+* Dokku
+* Git
+* JavaScript
 * Materialize
+* PHP
 * Pandas
+* Python
+* React
+* SQL
+* Selenium
+* TailwindCSS
+* TypeScript
+* Vuejs
+* WordPress
