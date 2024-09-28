@@ -18,8 +18,8 @@
       "linkedin": "https://www.linkedin.com/in/marcmatias"
     },
     "menu": {
-      "sobre": "/author",
-      "projetos": "/projects"
+      "projetos": "/projects",
+      "sobre": "/author"
     }
   }
 }
