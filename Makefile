@@ -14,6 +14,8 @@ stop:   ## Stop container
 watch:	## Runs a lite-server with examples accessible in http://localhost:3000
 	docker exec -it 11ty_dev sh -c "yarn watch & yarn run serve & wait -n"
 
+start:	up watch ## Up container to use
+
 eslint: ## Run eslint
 	docker exec 11ty_dev sh -c "yarn run eslint"
 
