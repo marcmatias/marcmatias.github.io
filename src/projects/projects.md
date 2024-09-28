@@ -14,7 +14,7 @@ Lista de projetos que desenvolvi ou contribuí ao longo da minha experiência co
 
 [https://brasil.io/home/](https://brasil.io/home/){target="_blank"}
 
-Tags: `#Dados`, `#Abertos`, `#Meio Ambiente`, `#Política`, `#Contas Públicas`, `#Saúde`, `#Gênero`.
+Tags: `#Dados Abertos`, `#Meio Ambiente`, `#Política`, `#Contas Públicas`, `#Saúde`, `#Gênero`.
 
 Plataforma que facilita o acesso a dados abertos, incluindo o projeto Brasil.IO COVID19, referência na pandemia, e pedidos de acesso à informação notáveis (como a liberação de dados de empresas e sócios pela Receita Federal). Gratuita e aberta, é desenvolvida e mantida por nós e apoiada por financiamento coletivo.
 
