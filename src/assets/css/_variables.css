@@ -17,6 +17,8 @@ html {
   --content-width--multiple: 860px;
   --header-height: 80px;
   --radius: 5px;
+  --hr-color: rgba(50,50,50,0);
+  --hr-middle-color: rgba(50,50,50,0.65);
 }
 
 /* Make  things smaller for mobile */
@@ -40,4 +42,6 @@ html.dark {
   --list-disk-color: #b7c1c7;
   --title-color: #fff;
   --link-color: #af9cef;
+  --hr-color: rgba(255,255,255,0);
+  --hr-middle-color: rgba(255,255,255,0.65);
 }

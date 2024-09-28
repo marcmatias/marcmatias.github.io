@@ -21,7 +21,13 @@
 }
 
 .author__intro {
-  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  color: var(--body-color);
+  font-size: .95em;
+  margin: 0 0 1rem;
+  max-width: 640px;
+  opacity: 0.8;
 }
 
 .author__site-title {
@@ -29,29 +35,11 @@
   font-size: 1.5em;
 }
 
-.author__button {
-  background-color: transparent;
-  border: none;
-  color: var(--body-color);
-  cursor: pointer;
-  font-size: 1em;
-  opacity: 0.8;
-}
-
-.author__button {
-  background-color: transparent;
-  border: none;
-  color: var(--body-color);
-  cursor: pointer;
-  font-size: 1em;
-  max-width: 450px;
-}
-
 .author__button:hover {
   opacity: 0.6;
 }
 
-.author__social {
+.author__menu {
   display: flex;
   justify-content: center;
   gap: 1em;
@@ -60,9 +48,20 @@
 
 .author__link {
   text-decoration: none;
+  font-size: 1em;
 }
 
 .author--detail {
   padding-top: calc(var(--space) / 3);
   padding-bottom: calc(var(--space) / 4);
+}
+
+.custom-hr {
+    background: -moz-linear-gradient(left, var(--hr-color) 0%, var(--hr-color) 10%, var(--hr-middle-color) 50%, var(--hr-color) 90%, var(--hr-color) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,var(--hr-color)), color-stop(10%,var(--hr-color)), color-stop(50%,var(--hr-middle-color)), color-stop(90%,var(--hr-color)), color-stop(100%,var(--hr-color))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, var(--hr-color) 0%,var(--hr-color) 10%,var(--hr-middle-color) 50%,var(--hr-color) 90%,var(--hr-color) 100%); /* Chrome10+,Safari5.1+ */
+    border: 0;
+    height: 1.5px;
+    margin: 4px 0;
+    position: relative;
 }

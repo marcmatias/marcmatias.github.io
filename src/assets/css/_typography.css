@@ -10,6 +10,14 @@ p {
   margin-bottom: 1.25em;
 }
 
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0;
+}
+
 h1, h2, h3, h4, h5 {
   transition: color .6s;
   color: var(--title-color);

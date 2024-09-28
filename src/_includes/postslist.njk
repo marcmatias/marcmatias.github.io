@@ -17,11 +17,11 @@
       <h2 class="post-card__title">
         {{ post.data.title }}
       </h2>
-
-      <p class="post-card__description">
-        {{ post.data.description }}
-      </p>
-
+      {% if templateClass in ["tmpl-index", "tmpl-tags"] %}
+        <p class="post-card__description">
+          {{ post.data.description }}
+        </p>
+      {% endif %}
       <time class="post-meta" datetime="{{ post.date | htmlDateString }}">
         Postado em {{ post.date | readableDate }}.
       </time>
