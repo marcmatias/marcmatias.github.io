@@ -26,7 +26,7 @@ Plataforma que facilita o acesso a dados abertos, incluindo o projeto Brasil.IO 
 
 Tags: `#Comunicação`, `#Tutoriais`.
 
-Blog voltado à disseminação de tutoriais e projetos, abrangendo uma ampla gama de tópicos relacionados à tecnologia e programação.
+Blog voltado à disseminação de tutoriais e projetos de código aberto, abrangendo uma ampla gama de tópicos relacionados à tecnologia e programação.
 
 ## CruzaGrafos
 
