@@ -6,6 +6,8 @@
 
 .post__content-box {
   padding: var(--space);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .post__header {
