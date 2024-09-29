@@ -12,7 +12,7 @@ layout: layouts/post.njk
 
 # Guia de instalação
 
-Após iniciar o disco de instalação veremos o console exibindo:
+Após iniciar o disco de instalação veremos seguinte retorno na tela:
 
 ```bash
 root@archiso ~ #
