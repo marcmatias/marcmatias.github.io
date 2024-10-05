@@ -27,6 +27,7 @@ const applyTheme = () => {
   const currentTheme = localStorage.getItem('theme');
   const htmlElement = document.documentElement;
   const buttonTheme = document.querySelectorAll(".btn-theme");
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   // Remove all htmlElement theme classes
   htmlElement.classList.remove('light', 'dark');
@@ -37,8 +38,13 @@ const applyTheme = () => {
       button.innerHTML = moon;
       button.title = "Tema escuro";
     });
-  } else if (currentTheme === 'system') {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  } else if (currentTheme === 'light') {
+    htmlElement.classList.add('light');
+    buttonTheme.forEach(button => {
+      button.innerHTML = sun
+      button.title = "Tema iluminado";
+    })
+  } else {
     if (prefersDarkScheme) {
       htmlElement.classList.add('dark');
     } else {
@@ -47,12 +53,6 @@ const applyTheme = () => {
     buttonTheme.forEach(button => {
       button.innerHTML = display;
       button.title = "Tema do sistema";
-    })
-  } else {
-    htmlElement.classList.add('light');
-    buttonTheme.forEach(button => {
-      button.innerHTML = sun
-      button.title = "Tema iluminado";
     })
   }
 }
