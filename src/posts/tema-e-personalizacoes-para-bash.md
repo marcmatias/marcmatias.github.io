@@ -3,9 +3,9 @@ title: "Tema e personalizações para bash"
 date: "2022-11-13"
 description: "Tema que utilizo no bash, linha de comando, para facilitar uso e interpretação de interações com sistema."
 tags:
-  - Linux
   - Bash
   - Linha de comando
+  - Linux
 cover: "/assets/images/covers/line-command.jpg"
 alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
