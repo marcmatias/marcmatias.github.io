@@ -36,7 +36,81 @@ templateClass: tmpl-post
 
   </div>
 
-  <div class="post-comments"></div>
+  <div class="post-comments">
+    <!-- Utterances container -->
+    <div id="utterances-comments">
+      <div class="utterances" style="height: 0"></div>
+    </div>
+    <script>
+      function addUtterances(theme) {
+        const postComments = document.querySelector('.post-comments');
+        postComments.classList.add('post-comments--loading');
+        const script = document.createElement('script');
+
+        script.setAttribute('src', 'https://utteranc.es/client.js');
+        script.setAttribute('repo', 'marcmatias/marcmatias.github.io');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('label', '💬');
+        script.setAttribute('theme', theme);
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('async', true);
+
+        // Remove existing utterances iframe if exists
+        const utterancesContainer = document.getElementById('utterances-comments');
+        const existingIframe = utterancesContainer.querySelector('.utterances');
+        if (existingIframe) {
+          utterancesContainer.removeChild(existingIframe);
+        }
+
+        // Append the new script tag
+        utterancesContainer.appendChild(script);
+
+        script.onload = function() {
+          const iframe = utterancesContainer.querySelector('iframe');
+          if (iframe) {
+            iframe.onload = function() {
+              postComments.classList.remove('post-comments--loading');
+            };
+          }
+        };
+
+      }
+
+      function getTheme() {
+        // Check if the html tag has a 'dark' class
+        return document.documentElement.classList.contains('dark')
+          ? 'dark-blue'  // Dark theme
+          : 'github-light'; // Light theme
+      }
+
+      const createDebounce = () => {
+        let timer;
+        return (fn, wait = 300) => {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            if (typeof fn === 'function') {
+              fn();
+            }
+          }, wait);
+        };
+      }
+
+      const debounce = createDebounce()
+      // Initialize utterances with the correct theme
+      addUtterances(getTheme());
+
+      // Observe changes to the 'class' attribute of the html tag
+      const observer = new MutationObserver(() => {
+        debounce(() => { addUtterances(getTheme()) })
+      });
+
+      // Start observing the HTML element for class changes
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    </script>
+  </div>
   <div class="content-buttons">
     <span class="other-posts-title">Outras postagens</span>
     {%- if collections.posts %}

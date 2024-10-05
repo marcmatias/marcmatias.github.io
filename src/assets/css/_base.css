@@ -19,7 +19,7 @@
   background-color: var(--bg-selection);
 }
 
-*:focus-visible {
+*:focus-visible:not(iframe) {
   border-radius: .25rem;
   outline: solid .15rem;
   outline-color: var(--body-color);

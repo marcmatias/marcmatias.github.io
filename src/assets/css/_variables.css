@@ -19,6 +19,12 @@ html {
   --radius: 5px;
   --hr-color: rgba(50,50,50,0);
   --hr-middle-color: rgba(50,50,50,0.65);
+  --skeleton-linear-gradient: linear-gradient(
+    90deg,
+    hsla(210, 15%, 88%),
+    hsla(210, 15%, 95%),
+    hsla(210, 15%, 88%)
+  );
 }
 
 /* Make  things smaller for mobile */
@@ -44,4 +50,10 @@ html.dark {
   --link-color: #af9cef;
   --hr-color: rgba(255,255,255,0);
   --hr-middle-color: rgba(255,255,255,0.65);
+  --skeleton-linear-gradient: linear-gradient(
+    90deg,
+    hsla(210, 40%, 28%, .3),
+    hsla(210, 40%, 35%, .4),
+    hsla(210, 40%, 28%, .2)
+  );
 }

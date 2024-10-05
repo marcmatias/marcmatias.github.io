@@ -1,0 +1,28 @@
+.utterances {
+  background-color: var(--bg-color);
+  min-height: 271px;
+  min-width: 100%;
+}
+
+.post-comments {
+  margin: 24px auto 0;
+  max-width: var(--content-width);
+  min-height: 271px;
+}
+
+.post-comments--loading {
+  background: var(--skeleton-linear-gradient);
+  background-size: 200%;
+  animation: loader 1s infinite reverse;
+  width: 100%;
+}
+
+/* skeleton animation */
+@keyframes loader {
+  from {
+    background-position: -100% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
