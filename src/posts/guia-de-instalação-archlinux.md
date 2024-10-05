@@ -205,5 +205,7 @@ reboot
 A máquina vai reiniciar e já devemos agora receber o retorno da tela de boot (GRUB). Escolhendo a primeira opção devemos logo chegar até a tela de login do sistema (SDDM).
 
 ## Referências
-- [Arch linux Logo Wallpaper](https://wallpapercrafter.com/104246-archlinux-arch-linux-cyan-white-white-background-arch-linux.html)
-- [How to Install Arch Linux [Step by Step Guide] It's FOSS](https://itsfoss.com/install-arch-linux/)
+
+- [Arch linux Logo Wallpaper](https://wallpapercrafter.com/104246-archlinux-arch-linux-cyan-white-white-background-arch-linux.html){target="_blank"}
+- [How to Install Arch Linux [Step by Step Guide] It's FOSS](https://itsfoss.com/install-arch-linux/){target="_blank"}
+- [Installation guide - ArchWiki - Arch Linux](https://wiki.archlinux.org/title/Installation_guide){target="_blank"}

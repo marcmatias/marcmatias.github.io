@@ -29,7 +29,7 @@ git fetch upstream
 git rebase upstream/master
 ```
 
-4. Agora é _**pushar**_ as mudanças do clone local para o repositório fork no Git
+4. Agora é hora de fazer o push das mudanças do clone local para o repositório fork no Git
 
 ```bash
 git push origin master
@@ -41,8 +41,8 @@ repositório de origem.
 
 ## Fontes
 
-- [https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a](https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a){target="_blank"}
-- [https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/](https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/){target="_blank"}
+- [How to update a forked repo with git rebase](https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a){target="_blank"}
+- [How to update a forked repo from an upstream with git rebase (or merge)](https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/){target="_blank"}
 
 _Photo by Felix Mittermeier from Pexels_
 
