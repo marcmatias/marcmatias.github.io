@@ -69,7 +69,6 @@ em {
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
-  margin-top: .5em;
 }
 
 ul li {
@@ -89,3 +88,51 @@ ol {
 ol li {
   margin-bottom: .6em;
 }
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse:separate;
+    margin: 20px 0;
+}
+
+/* Table Header Styles */
+th {
+    padding: 12px;
+    text-align: left;
+    background-color: var(--bg-code);
+    border: 1px solid var(--body-color);
+    border-bottom: 4px solid var(--body-color);
+    text-wrap: nowrap;
+}
+
+/* Table Cell Styles */
+td {
+    padding: 12px;
+    border: 1px solid var(--body-color);
+}
+
+th:first-of-type {
+  border-top-left-radius: .23rem;
+}
+th:last-of-type {
+  border-top-right-radius: .23rem;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: .23rem;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: .23rem;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: var(--bg-color);
+}
+
+/* Alternating row colors for better readability */
+/*
+tr:nth-child(even) {
+    background-color: var(--bg-color);
+}
+*/

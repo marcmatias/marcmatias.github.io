@@ -13,18 +13,24 @@
   line-height: 1rem;
 }
 
-.btn--nav {
-  background-color: transparent;
-  box-shadow: none;
+.btn__icon {
+  overflow: visible;
+}
+
+.btn--active {
+  background-color: var(--bg-selection);
+  color: var(--text-selection);
+}
+
+.btn--small {
   padding: .4rem;
 }
 
 .btn--nav {
+  background-color: transparent;
+  box-shadow: none;
+  padding: .4rem;
   pointer-events: auto;
-}
-
-.btn__icon {
-  overflow: visible;
 }
 
 .btn--nav:hover {

@@ -25,6 +25,8 @@ html {
     hsla(210, 15%, 95%),
     hsla(210, 15%, 88%)
   );
+  --scrollbar-thumb-color: rgb(125, 125, 125);
+  --scrollbar-thumb-hover-color: rgb(100, 100, 100);
 }
 
 /* Make  things smaller for mobile */
@@ -56,4 +58,6 @@ html.dark {
     hsla(210, 40%, 35%, .4),
     hsla(210, 40%, 28%, .2)
   );
+  --scrollbar-thumb-color: rgb(125, 125, 125);
+  --scrollbar-thumb-hover-color: rgb(150, 150, 150);
 }

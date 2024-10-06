@@ -7,31 +7,48 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  */
 
 pre {
-  padding: 2.5rem;
+  padding: 0 2.5rem;
   font-size: 0.85em;
   background-color: var(--bg-code);
   margin-bottom: 2em;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+  display: flex;
+  overflow-x: overlay; /* A barra de rolagem será sobreposta ao conteúdo */
+}
+
+pre::after {
+  content: "";
+  min-width: 5px;
 }
 
 pre::-webkit-scrollbar {
   height: .3rem;
-  width: .1rem;
-  background: var(--bg-code);
-}
-
-pre::-webkit-scrollbar-thumb {
-  background: var(--body-color);
   -webkit-border-radius: .25rem;
 }
 
-pre::-webkit-scrollbar-corner {
-    background: #000;
+pre::-webkit-scrollbar-thumb {
+  -webkit-border-radius: .25rem;
 }
+
+pre:hover::-webkit-scrollbar {
+  position: absolute;
+  background: transparent;
+}
+
+pre:hover::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color);
+}
+
+/* Code blocks */
 
 code {
   font-weight: 500;
+  padding: 2.5rem 0;
 }
 
 code:not([class]) {
@@ -64,11 +81,6 @@ pre {
   pre {
     text-shadow: none;
   }
-}
-
-/* Code blocks */
-pre {
-  overflow-x: auto;
 }
 
 /* Inline code */
