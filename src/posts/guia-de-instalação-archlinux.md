@@ -117,9 +117,9 @@ sudo reflector --verbose --country 'Brazil' -l 5 --sort rate --save /etc/pacman.
 | ------------- | ------------- |
 | --verbose   | Exibe logs mais completos                                               |
 | --country   | A minha localização atual de onde deve vir os espelhos para download    |
-| --l 5       | pega os 5 melhores espelhos do Brasil                                   |
-| --sort rate | organiza pelo download mais rápido                                      |
-| --save      | salva os espelhos em /etc/pacman-d/mirrorlist                           |
+| --l 5       | Pega os 5 melhores espelhos                                             |
+| --sort rate | Organiza pelo download mais rápido                                      |
+| --save      | Salva os espelhos em /etc/pacman-d/mirrorlist                           |
 
 ## Instalação do Arch Linux
 
