@@ -1,8 +1,9 @@
 {
-  "title": "Marcmatias' blog",
+  "name": "marcmatias",
+  "title": "marcmatias blog",
   "url": "https://marcmatias.github.io",
   "language": "pt-br",
-  "description": "Marcel Marques, desenvolvedor de softwares e bacharel em Sistemas para Internet.",
+  "description": "Blog de Marcel Marques, programador e entusiasta do software livre. Sempre em busca de soluções inovadoras e colaborativas, com foco em desenvolvimento eficiente e acessível.",
   "author": {
     "name": "Marcel Marques",
     "email": "marcmatiasdev@gmail.com",
@@ -10,7 +11,7 @@
     "url_repo": "https://github.com/marcmatias/marcmatias.github.io",
     "nickname": "@marcmatias",
     "image": "assets/images/author.jpg",
-    "bio": "Marcel Marques, programador e entusiasta do software livre. Sempre em busca de soluções inovadoras e colaborativas, com foco em desenvolvimento eficiente e acessível. ",
+    "bio": "Marcel Marques, programador e entusiasta do software livre. Sempre em busca de soluções inovadoras e colaborativas, com foco em desenvolvimento eficiente e acessível.",
     "social": {
       "bluesky": "https://bsky.app/profile/marcmatias.bsky.social",
       "codepen": "https://codepen.io/marcmatias",
