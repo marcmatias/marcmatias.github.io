@@ -63,7 +63,7 @@ const applyTheme = () => {
 })()
 
 // BackButton FowardButton work with theme updated by user
-document.onvisibilitychange = window.onunload = window.onbeforeunload = function() {
+document.onvisibilitychange = window.onpagehide = window.onbeforeunload = function() {
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   let currentTheme = localStorage.getItem("theme");
