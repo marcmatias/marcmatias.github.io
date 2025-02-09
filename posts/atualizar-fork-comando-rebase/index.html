@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <title>
+      marcmatias blog | Como atualizar fork com comando rebase
+    </title>
+    <meta name="description" content="Guia com os comandos necessários para atualizar o fork com comando rebase">
+
+    <link rel="icon" type="image/x-icon" href="https://marcmatias.github.io/assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="alternate" href="." type="application/atom+xml" title="marcmatias blog">
+    <link rel="alternate" href="." type="application/json" title="marcmatias blog">
+
+    <!-- Set/change theme script -->
+    <script src="/assets/js/theme-toggle.js"></script>
+
+      
+    <!-- Open graph -->
+    <meta property="og:site_name" content="marcmatias">
+    <meta property="og:title" content="marcmatias blog | Como atualizar fork com comando rebase">
+    <meta property="og:description" content="Guia com os comandos necessários para atualizar o fork com comando rebase">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://marcmatias.github.io/assets/images/covers/three.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:url" content="https://marcmatias.github.io" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="marcmatias blog | Como atualizar fork com comando rebase">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@marcmatias">
+    <meta name="twitter:description" content="Guia com os comandos necessários para atualizar o fork com comando rebase">
+    <meta name="twitter:image" content="https://marcmatias.github.io/assets/images/covers/three.jpg" >
+    <meta name="twitter:creator" content="@marcmatias">
+
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-title" content="marcmatias">
+    <meta name="application-name" content="marcmatias">
+
+    
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232324681-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-232324681-1');
+      </script>
+    
+
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header__left">
+          
+          <button
+            onclick="location.href = '/'"
+            class="btn btn--nav btn--nav-back-button"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+              />
+            </svg>
+            Home
+          </button>
+          
+        </div>
+        <div class="header__right">
+          <button
+            class="btn btn--nav btn-theme"
+            onclick="toggleTheme()"
+            tabindex="0"
+            style="cursor: pointer; line-height: 0rem"
+          >
+          </button>
+        <div>
+      </nav>
+    </header>
+
+    <main class="main  tmpl-post">
+      <article class="post">
+  <div class="main-title">
+    <h1 class="post-title__text">
+      Como atualizar fork com comando rebase
+    </h1>
+
+    <time class="post-meta" datetime="2021-04-03">Postado em 03 abr. 2021</time>
+  </div>
+
+  <div class="post post__content-box content-box">
+
+    
+      <div class="post__header">
+        <img
+          class="post-card__image"
+          src="/assets/images/covers/three.jpg"
+          alt="Árvore com muitos galhos"
+        /><br>
+      </div>
+    
+
+    <p><em>Guia com os comandos necessários para atualizar o fork com comando rebase.</em></p>
+<ol>
+<li>Set o upstream caso já não o tenha setado</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original-repo/goes-here.git</code></pre>
+<ol start="2">
+<li>Pegue todas as modificações e branches do upstream</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> fetch upstream</code></pre>
+<ol start="3">
+<li>Com rebase reescrevemos a nossa master com o que foi baixado no passo anterior</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> rebase upstream/master</code></pre>
+<ol start="4">
+<li>Agora é hora de fazer o push das mudanças do clone local para o repositório fork no Git</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> push origin master</code></pre>
+<ol start="5">
+<li>Na página do repositório fork no Github (se você estiver utilizando esse serviço) será possível ver a informação de que
+agora seu estado é de <em>even (in sync)</em>, ou seja, sincronizado com o
+repositório de origem.</li>
+</ol>
+<h2 id="fontes" tabindex="-1"><a class="header-anchor" href="#fontes">Fontes</a></h2>
+<ul>
+<li><a href="https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a" target="_blank">How to update a forked repo with git rebase</a></li>
+<li><a href="https://timonweb.com/misc/how-to-update-a-forked-repo-from-an-upstream-with-git-rebase-or-merge/" target="_blank">How to update a forked repo from an upstream with git rebase (or merge)</a></li>
+</ul>
+<p><em>Photo by Felix Mittermeier from Pexels</em></p>
+
+
+    <div class="post__footer">
+          <div class="post-tags">
+            <a href="/tags/git/" class="post-tags__link">#Git</a>
+          </div>
+          <div class="post-tags">
+            <a href="/tags/linha-de-comando/" class="post-tags__link">#Linha de comando</a>
+          </div>
+    </div>
+
+  </div>
+
+  <div class="post-comments">
+    <!-- Utterances container -->
+    <div id="utterances-comments">
+      <div class="utterances" style="height: 0"></div>
+    </div>
+    <script>
+      function addUtterances(theme) {
+        const utterancesContainer = document.getElementById('utterances-comments');
+        const existingIframe = utterancesContainer.querySelector('.utterances');
+        // ExistingIframe not loaded yet
+        if (existingIframe.style.height === "") {
+          return;
+        }
+
+        const postComments = document.querySelector('.post-comments');
+        postComments.classList.add('post-comments--loading');
+        const script = document.createElement('script');
+
+        script.setAttribute('src', 'https://utteranc.es/client.js');
+        script.setAttribute('repo', 'marcmatias/marcmatias.github.io');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('label', '💬');
+        script.setAttribute('theme', theme);
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('async', true);
+
+        // Remove existing utterances iframe if exists
+        if (existingIframe) {
+          utterancesContainer.removeChild(existingIframe);
+        }
+
+        // Append the new script tag
+        utterancesContainer.appendChild(script);
+
+        script.onload = function() {
+          const iframe = utterancesContainer.querySelector('iframe');
+          if (iframe) {
+            iframe.onload = function() {
+              postComments.classList.remove('post-comments--loading');
+            };
+          }
+        };
+
+      }
+
+      function getTheme() {
+        // Check if the html tag has a 'dark' class
+        return document.documentElement.classList.contains('dark')
+          ? 'dark-blue'  // Dark theme
+          : 'github-light'; // Light theme
+      }
+
+      // Initialize utterances with the correct theme
+      document.addEventListener('DOMContentLoaded',  addUtterances(getTheme()));
+
+      const createDebounce = () => {
+        let timer;
+        return (fn, wait = 300) => {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            if (typeof fn === 'function') {
+              fn();
+            }
+          }, wait);
+        };
+      }
+
+      const debounce = createDebounce()
+
+      // Observe changes to the 'class' attribute of the html tag
+      const observer = new MutationObserver(() => {
+        debounce(() => { addUtterances(getTheme()) })
+      });
+
+      // Start observing the HTML element for class changes
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    </script>
+  </div>
+  <div class="content-buttons">
+    <span class="other-posts-title">Outras postagens</span>
+        <div class="post-links__buttons">
+            <button
+              class="btn btn--post-links btn--post-links-left"
+              onclick="location.href = '/posts/playlist-musical/'"
+              title="Clique para ver postagem seguinte"
+            >
+              <svg
+                class="btn__icon btn__icon--post-links btn__icon--post-links-left"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                />
+              </svg>
+              Mix de músicas
+            </button>
+          
+            <button
+              class="btn btn--post-links btn--post-links-right"
+              onclick="location.href = '/posts/hello-world/'"
+              title="Clique para ver postagem anterior"
+            >
+              Hello World
+              <svg
+                class="btn__icon btn__icon--post-links btn__icon--post-links-right"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </button>
+          
+        </div>
+  </div>
+</article>
+
+<div class="author">
+  
+    <img
+      alt="Author img"
+      class="author__image"
+      src="/assets/images/author.jpg"
+      alt="Author image"
+    />
+  
+
+  <h1 class="author__site-title">@marcmatias</h1>
+
+  <div class="author__intro">
+    Marcel Marques, programador e entusiasta do software livre. Sempre em busca de soluções inovadoras e colaborativas, com foco em desenvolvimento eficiente e acessível.
+  </div>
+
+  
+    <div class="author__menu">
+      
+        <a class="author__link" href="/projects">Projetos</a>
+      
+        <a class="author__link" href="/author">Sobre</a>
+      
+    </div>
+  
+  <span></span>
+  <hr class="custom-hr" />
+  
+    <div class="author__menu">
+      
+        <a class="author__link" href="https://bsky.app/profile/marcmatias.bsky.social" target="blank">Bluesky</a>
+      
+        <a class="author__link" href="https://codepen.io/marcmatias" target="blank">Codepen</a>
+      
+        <a class="author__link" href="https://github.com/marcmatias" target="blank">Github</a>
+      
+        <a class="author__link" href="https://www.linkedin.com/in/marcmatias" target="blank">Linkedin</a>
+      
+    </div>
+  
+</div>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__cc">
+        <span class="footer__date"></span>
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          class="footer__cc-icon footer__icon"
+          aria-label="Licenses of this blog"
+        >
+          <svg width="20" height="20" viewBox="5.5 -3.5 64 64" >
+            <path d="m 37.441,-3.5 c 8.951,0 16.572,3.125 22.857,9.372 3.008,3.009 5.295,6.448 6.857,10.314 1.561,3.867 2.344,7.971 2.344,12.314 0,4.381 -0.773,8.486 -2.314,12.313 -1.543,3.828 -3.82,7.21 -6.828,10.143 -3.123,3.085 -6.666,5.448 -10.629,7.086 -3.961,1.638 -8.057,2.457 -12.285,2.457 -4.228,0 -8.276,-0.808 -12.143,-2.429 C 21.434,56.452 17.967,54.109 14.9,51.043 11.833,47.977 9.5,44.519 7.9,40.671 6.3,36.823 5.5,32.767 5.5,28.5 5.5,24.271 6.309,20.205 7.928,16.3 9.547,12.395 11.9,8.9 14.985,5.814 21.08,-0.394 28.565,-3.5 37.441,-3.5 Z m 0.116,5.772 c -7.314,0 -13.467,2.553 -18.458,7.657 -2.515,2.553 -4.448,5.419 -5.8,8.6 -1.354,3.181 -2.029,6.505 -2.029,9.972 0,3.429 0.675,6.734 2.029,9.913 1.353,3.183 3.285,6.021 5.8,8.516 2.514,2.496 5.351,4.399 8.515,5.715 3.161,1.314 6.476,1.971 9.943,1.971 3.428,0 6.75,-0.665 9.973,-1.999 3.219,-1.335 6.121,-3.257 8.713,-5.771 4.99,-4.876 7.484,-10.99 7.484,-18.344 0,-3.543 -0.648,-6.895 -1.943,-10.057 C 60.491,15.283 58.604,12.465 56.13,9.987 50.984,4.844 44.795,2.272 37.557,2.272 Z m -0.401,20.915 -4.287,2.229 c -0.458,-0.951 -1.019,-1.619 -1.685,-2 -0.667,-0.38 -1.286,-0.571 -1.858,-0.571 -2.856,0 -4.286,1.885 -4.286,5.657 0,1.714 0.362,3.084 1.085,4.113 0.724,1.029 1.791,1.544 3.201,1.544 1.867,0 3.181,-0.915 3.944,-2.743 l 3.942,2 c -0.838,1.563 -2,2.791 -3.486,3.686 -1.484,0.896 -3.123,1.343 -4.914,1.343 -2.857,0 -5.163,-0.875 -6.915,-2.629 -1.752,-1.752 -2.628,-4.19 -2.628,-7.313 0,-3.048 0.886,-5.466 2.657,-7.257 1.771,-1.79 4.009,-2.686 6.715,-2.686 3.963,-0.002 6.8,1.541 8.515,4.627 z m 18.457,0 -4.229,2.229 c -0.457,-0.951 -1.02,-1.619 -1.686,-2 -0.668,-0.38 -1.307,-0.571 -1.914,-0.571 -2.857,0 -4.287,1.885 -4.287,5.657 0,1.714 0.363,3.084 1.086,4.113 0.723,1.029 1.789,1.544 3.201,1.544 1.865,0 3.18,-0.915 3.941,-2.743 l 4,2 c -0.875,1.563 -2.057,2.791 -3.541,3.686 -1.486,0.896 -3.105,1.343 -4.857,1.343 -2.896,0 -5.209,-0.875 -6.941,-2.629 -1.736,-1.752 -2.602,-4.19 -2.602,-7.313 0,-3.048 0.885,-5.466 2.658,-7.257 1.77,-1.79 4.008,-2.686 6.713,-2.686 3.962,-0.002 6.783,1.541 8.458,4.627 z" />
+          </svg>
+          <svg width="20" height="20" viewBox="5.5 -3.5 64 64">
+            <path d="m 37.443,-3.5 c 8.988,0 16.57,3.085 22.742,9.257 6.208,6.21 9.315,13.791 9.315,22.743 0,8.991 -3.049,16.476 -9.145,22.456 C 53.879,57.319 46.242,60.5 37.443,60.5 28.794,60.5 21.29,57.356 14.929,51.07 8.644,44.784 5.5,37.262 5.5,28.5 5.5,19.739 8.644,12.158 14.929,5.758 21.101,-0.415 28.604,-3.5 37.443,-3.5 Z m 0.114,5.772 c -7.276,0 -13.428,2.553 -18.457,7.657 -5.22,5.334 -7.829,11.525 -7.829,18.572 0,7.086 2.59,13.22 7.77,18.398 5.181,5.182 11.352,7.771 18.514,7.771 7.123,0 13.334,-2.607 18.629,-7.828 5.029,-4.838 7.543,-10.952 7.543,-18.343 0,-7.276 -2.553,-13.465 -7.656,-18.571 C 50.967,4.824 44.795,2.272 37.557,2.272 Z m 8.572,18.285 V 33.642 H 42.473 V 49.184 H 32.529 V 33.643 H 28.873 V 20.557 c 0,-0.572 0.2,-1.057 0.599,-1.457 0.401,-0.399 0.887,-0.6 1.457,-0.6 h 13.144 c 0.533,0 1.01,0.2 1.428,0.6 0.417,0.4 0.628,0.886 0.628,1.457 z M 33.042,12.329 c 0,-3.008 1.485,-4.514 4.458,-4.514 2.973,0 4.457,1.504 4.457,4.514 0,2.971 -1.486,4.457 -4.457,4.457 -2.971,0 -4.458,-1.486 -4.458,-4.457 z" />
+          </svg>
+
+        </a>
+        Marcmatias
+        <a
+          href="https://github.com/marcmatias/marcmatias.github.io"
+          class="footer__icon"
+          target="_blank"
+          aria-label="Repository of this blog link"
+        >
+          <svg width="20" height="20" viewBox="5.5 -3.5 64 64" >
+            <path d="m 37.500002,-1.8573152 c -17.19666,0 -31.1251735,13.9285142 -31.1251735,31.1251682 0,13.772887 8.9095805,25.405919 21.2818395,29.530004 1.556258,0.272345 2.139855,-0.66141 2.139855,-1.478445 0,-0.739223 -0.03891,-3.19033 -0.03891,-5.797063 -7.8202,1.439539 -9.843336,-1.906417 -10.465839,-3.657208 -0.350158,-0.894848 -1.86751,-3.657207 -3.19033,-4.39643 -1.089381,-0.583597 -2.645639,-2.023136 -0.03891,-2.062042 2.451107,-0.03891 4.201898,2.256575 4.785495,3.19033 2.801269,4.707682 7.275512,3.384862 9.065209,2.567826 0.272346,-2.023136 1.089381,-3.384862 1.98423,-4.162991 -6.925351,-0.778129 -14.161956,-3.462675 -14.161956,-15.368052 0,-3.384861 1.2061,-6.186126 3.190329,-8.364888 -0.311251,-0.778129 -1.400632,-3.968459 0.311252,-8.24817 0,0 2.606737,-0.817036 8.559426,3.19033 2.490014,-0.700316 5.135653,-1.050474 7.781292,-1.050474 2.64564,0 5.291279,0.350158 7.781293,1.050474 5.952688,-4.046272 8.559421,-3.19033 8.559421,-3.19033 1.711885,4.279711 0.622504,7.470041 0.311252,8.24817 1.984229,2.178762 3.19033,4.941121 3.19033,8.364888 0,11.944283 -7.275509,14.589923 -14.200859,15.368052 1.128288,0.972661 2.100949,2.840171 2.100949,5.758156 0,4.162991 -0.03891,7.508947 -0.03891,8.559422 0,0.817035 0.583597,1.789697 2.139855,1.478445 a 31.171857,31.171857 0 0 0 21.20403,-29.530004 c 0,-17.196654 -13.928515,-31.1251682 -31.12517,-31.1251682 z" style="stroke-width:3.89065" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="/assets/js/footer-date.js"></script>
+    <script src="/assets/js/copy-code.js"> </script>
+  </body>
+</html>
