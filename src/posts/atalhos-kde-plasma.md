@@ -10,9 +10,9 @@ alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
 ---
 
-_Este é um guia de atalhos utilizando teclado para encurtar o caminho de executar ações no ambiente KDE Plasma._
+_Este é um guia de atalhos utilizando teclado para encurtar o caminho de executar ações no ambiente Plasma._
 
-O [KDE Plasma](https://kde.org/plasma-desktop/){target="_blank"} é um ambiente de desktop desenvolvido pelo projeto [KDE](https://kde.org/for/){target="_blank"}, bastante popular em sistemas Linux. Ele oferece uma interface gráfica moderna e altamente personalizável, permitindo aos usuários ajustar a aparência e o comportamento do desktop.
+O [Plasma](https://kde.org/plasma-desktop/){target="_blank"} é um ambiente de desktop desenvolvido pelo projeto [KDE](https://kde.org/for/){target="_blank"}, bastante popular em sistemas Linux. Ele oferece uma interface gráfica moderna e altamente personalizável, permitindo aos usuários ajustar a aparência e o comportamento do desktop.
 
 Segue alguns dos atalhos mais interessantes, o simbolo "+" foi utilizado para simbolizar que tecla anterior ao símbolo deve ser pressionada junta com tecla posterior ao símbolo. Estes atalhos foram testados no Plasma versão 6.1.5.
 
@@ -63,7 +63,7 @@ Segue alguns dos atalhos mais interessantes, o simbolo "+" foi utilizado para si
 - Visualizar editor de tiles
 	- `META + T`
 - Adicionar janela que esta sendo movida a uma tile específica
-	- `Shift`
+	- `Shift` + Arrastar janela
 - Seletor de emojis 😆
 	- `META + .`
 - Abrir Konsole
