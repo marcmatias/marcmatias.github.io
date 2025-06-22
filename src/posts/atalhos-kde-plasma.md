@@ -1,10 +1,11 @@
 ---
-title: "Atalhos de teclado ambiente KDE Plasma"
+title: "Atalhos de teclado ambiente Plasma desktop"
 date: "2024-09-21"
 description: "Este é um guia de atalhos utilizando teclado para encurtar o caminho de executar ações no ambiente KDE Plasma."
 tags:
   - KDE
-  - KDE Plasma
+  - Plasma
+  - Desktop
 cover: "/assets/images/covers/kde-plasma.png"
 alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
@@ -97,6 +98,16 @@ Emulador de terminal do KDE
     - `CTRL + [`
 - Reduzir largura da aba atual
     - `CTRL + ]`
+- Abrir nova aba
+    - `CTRL + SHIFT + T`
+- Alternar entre abas
+    - `CTRL + TAB`
+- Alternar entre abas no sentido oposto
+    - `CTRL + SHIFT + TAB`
+- Alternar para uma aba específica
+    - `ALT + 1`
+    - `ALT + 2`
+    - `ALT + 3`...
 
 ## Referências
 

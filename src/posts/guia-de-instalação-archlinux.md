@@ -64,9 +64,19 @@ swapon /dev/xxx
 
 ## Ativar WIFI
 
-Para ligar a placa Wifi foi necessário executar comando `rfkill unblock wifi`. Utilizaremos o iwctl para conectarmos a Wifi
+Para ligar a placa Wifi foi necessário executar comando
 
-Escaneamos a rede
+```bash
+rfkill unblock wifi
+```
+
+Utilizaremos o `iwctl` para conectarmos à Wifi
+
+```bash
+iwctl
+```
+
+Agora escaneamos a rede
 
 ```bash
 station wlan0 scan
@@ -81,16 +91,16 @@ station wlan0 get-networks
 Agora vamos conectar em uma dessas redes escaneadas
 
 ```bash
-station wlan0 connect "Name of Network/WiFi"
+station wlan0 connect "Nome da Network/WiFi"
 ```
 
-Após fazermos a conexão podemos sair
+Após termos feito a conexão podemos sair do `iwctl`
 
 ```bash
 exit
 ```
 
-Agora podemos sincronizar os pacotes do Arch Linux `pacman -Syy`
+Agora podemos sincronizar os pacotes do Arch Linux `pacman -Syy` para testar se tudo está funcionando como esperado
 
 É recomendável atualizar o mirrorlists com isso teremos os packages Arch Linux sendo baixados dos servidores mais rápidos possíveis em relação a nossa conexão com a rede (sugerido pelo guia do FOSS)
 
