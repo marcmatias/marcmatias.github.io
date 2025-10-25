@@ -41,7 +41,7 @@ Foi necessário formatar as partições nos formatos necessários para cada tipo
 Boot EFI
 
 ```bash
-mkfs.fat -F32 /dev/xxx
+mkfs.fat -F 32 /dev/xxx
 ```
 
 `/` e `/home` com
@@ -210,7 +210,11 @@ passwd
 ## Grub (inicialização)
 
 ```bash
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
+pacman -S grub efibootmgr
+```
+
+```bash
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Archlinux
 ```
 
 ```bash
@@ -225,21 +229,21 @@ Instalação de sudo para uso de comando sudo no futuro
 pacman -S sudo
 ```
 
-Adicionando usuário marcmatias
+Adicionando usuário username (substitua `username` por algum nome de usuário que você preferir)
 
 ```bash
-useradd -m marcmatias
+useradd -m username
 ```
 
 Geramos uma senha
 
 ```bash
-passwd marcmatias
+passwd username
 ```
 Adicionamos o novo usuário aos grupos separados por vírgula
 
 ```bash
-usermod -aG wheel,audio,video,storage marcmatias
+usermod -aG wheel,audio,video,storage username
 ```
 
 Editar aquivo `/etc/sudoers` para adicionar o conteúdo abaixo do campo `root ALL=(ALL) ALL`. Desse modo concedemos permissão de root através do comando sudo para este usuário
@@ -253,7 +257,7 @@ marcmatias ALL=(ALL) ALL
 Optei por fazer a instalação do Plasma
 
 ```bash
-pacman -S xorg networkmanager plasma plasma-wayland-session
+pacman -S xorg networkmanager plasma
 ```
 
 Vamos deixar ativado por padrão o gerenciador de logins e o network manager assim será
