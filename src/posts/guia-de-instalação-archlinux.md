@@ -5,7 +5,7 @@ date: 2023-01-29
 tags:
   - Arch Linux
   - Linux
-cover: "/assets/images/covers/Archlinux.png"
+cover: "/assets/images/covers/Archlinux.webp"
 alt: Logo do Arch Linux
 layout: layouts/post.njk
 ---

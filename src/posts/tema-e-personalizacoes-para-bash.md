@@ -6,7 +6,7 @@ tags:
   - Bash
   - Linha de comando
   - Linux
-cover: "/assets/images/covers/line-command.jpg"
+cover: "/assets/images/covers/line-command.webp"
 alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
 ---

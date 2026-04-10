@@ -6,7 +6,7 @@ tags:
   - KDE
   - Plasma
   - Desktop
-cover: "/assets/images/covers/kde-plasma.png"
+cover: "/assets/images/covers/kde-plasma.webp"
 alt: Encontro de cantos da parede de um quarto
 layout: layouts/post.njk
 ---
